@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Fira Sans-fallback";
+  size-adjust: 102.56%;
+  ascent-override: 92%;
+  src: local("Arial");
+}
+
+// Fonts
+$skin-font-family-primary: "Fira Sans", "Fira Sans-fallback", sans-serif !default;
+$skin-font-family-secondary: "Fira Sans", "Fira Sans-fallback", sans-serif !default;
+
+// Navbar
+$navbarStyle: "navbar-c" !default;
+$theme-site-navbar-primary-type: light !default;
+$theme-site-navbar-primary-link-color: #3f4043 !default;
+$theme-site-navbar-primary-link-active-color: $primary !default;
+$theme-site-navbar-primary-link-hover-color: $primary !default;
+$theme-site-navbar-primary-bg-color: #f0f1f2 !default;
+$theme-site-navbar-logo-height: 30px !default;
+$theme-site-navbar-secondary-font-size: 16px !default;
+$theme-card-header-text-transform: uppercase !default;
+
+// Ads
+$leaderboard-min-height-mobile: 100px !default;
+$leaderboard-min-height-desktop: 90px !default;
