@@ -4,6 +4,7 @@ const { set, get } = require('@parameter1/base-cms-object-path');
 const loadInquiry = require('@parameter1/base-cms-marko-web-inquiry');
 const htmlSitemapPagination = require('@parameter1/base-cms-marko-web-html-sitemap/middleware/paginated');
 const companySearchHandler = require('@parameter1/base-cms-marko-web-theme-monorail/routes/company-search');
+const identityX = require('@parameter1/base-cms-marko-web-identity-x');
 
 const document = require('./components/document');
 const components = require('./components');
@@ -60,6 +61,7 @@ module.exports = (options = {}) => {
       set(app.locals, 'nativeX', nativeXConfig);
 
       const idxConfig = get(options, 'siteConfig.identityX');
+      identityX(app, idxConfig, { templates: idxRouteTemplates });
 
       // i18n
       const i18n = v => v;
