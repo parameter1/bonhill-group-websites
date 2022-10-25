@@ -1,6 +1,6 @@
 const configureGAM = require('@bonhill-group/package-global/config/gam');
 
-const config = configureGAM({ basePath: 'in' });
+const config = configureGAM({ basePath: 'p1' });
 
 config.lazyLoad = {
   enabled: true, // set to true to enable lazy loading
