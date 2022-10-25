@@ -16,6 +16,25 @@ const topics = [
   { href: '/regulation-legislation', label: 'Regulation & Legislation' },
 ];
 
+const retirement = [
+  { href: 'retirement/401k', label: '401(k)' },
+  { href: 'retirement/403b-plans', label: '403(b)' },
+  { href: 'retirement/defined-benefit-plans', label: 'Defined-Benefit' },
+  { href: 'retirement/defined-contribution-plans', label: 'Defined-Contribution' },
+  { href: 'retirement/health-savings-accounts', label: 'HSAs' },
+  { href: 'retirement/individual-retirement-accounts', label: 'IRAs' },
+  { href: 'retirement/medicare', label: 'Medicare' },
+  { href: 'retirement/pooled-employer-plans', label: 'Pooled Employer' },
+  { href: 'retirement/retirement-plan-advisers', label: 'Retirement Plan Advisers' },
+  { href: 'retirement/social-security', label: 'Social Security' },
+];
+
+const investing = [];
+const practiceManagement = [];
+const industry = [];
+const fintech = [];
+const regulationLegislation = [];
+
 const mobileMenu = {
   primary: topics,
   secondary: resources,
@@ -90,52 +109,60 @@ module.exports = {
     items: [],
   },
   contexts: [
-    // {
-    //   when: ['/business-insights'],
-    //   secondary: {
-    //     items: topics,
-    //   },
-    //   tertiary: { items: [] },
-    //   primary: {
-    //     items: businessInsights,
-    //   },
-    // },
-    // {
-    //   when: ['/diagnostic-technologies'],
-    //   secondary: { items: [...topics] },
-    //   tertiary: { items: [] },
-    //   primary: {
-    //     items: diagnosticTechnologies,
-    //   },
-    // },
-    // {
-    //   when: ['/diseases'],
-    //   secondary: { items: [...topics] },
-    //   tertiary: { items: [] },
-    //   primary: {
-    //     items: diseases,
-    //   },
-    // },
-    // {
-    //   when: ['/research-and-development'],
-    //   secondary: { items: [...topics] },
-    //   tertiary: { items: [] },
-    //   primary: {
-    //     items: researchDevelopment,
-    //   },
-    // },
-    // {
-    //   when: ['/resources'],
-    //   secondary: { items: [...topics] },
-    //   tertiary: { items: [] },
-    //   primary: {
-    //     items: resources,
-    //   },
-    // },
+    {
+      when: ['/retirement'],
+      secondary: {
+        items: topics,
+      },
+      tertiary: { items: [] },
+      primary: {
+        items: retirement,
+      },
+    },
+    {
+      when: ['/investing'],
+      secondary: { items: topics },
+      tertiary: { items: [] },
+      primary: {
+        items: investing,
+      },
+    },
+    {
+      when: ['/practice-management'],
+      secondary: { items: topics },
+      tertiary: { items: [] },
+      primary: {
+        items: practiceManagement,
+      },
+    },
+    {
+      when: ['/industry'],
+      secondary: { items: topics },
+      tertiary: { items: [] },
+      primary: {
+        items: industry,
+      },
+    },
+    {
+      when: ['/fintech'],
+      secondary: { items: topics },
+      tertiary: { items: [] },
+      primary: {
+        items: fintech,
+      },
+    },
+    {
+      when: ['/regulation-legislation'],
+      secondary: { items: topics },
+      tertiary: { items: [] },
+      primary: {
+        items: regulationLegislation,
+      },
+    },
   ],
   toggleMenu: {
     col1: {
-      label: 'Investing',
+      label: 'Retirement',
       items: [],
     },
     col2: {
