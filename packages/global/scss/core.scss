@@ -360,6 +360,13 @@ label {
       }
     }
   }
+  &--latest-opinion-list {
+    .node {
+      &__image {
+        border: none;
+      }
+    }
+  }
 }
 // End right rail content layout CSS
 
