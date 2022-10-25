@@ -2,9 +2,13 @@ const subscribe = require('./subscribe');
 const privacyPolicy = require('./privacy-policy');
 
 const resources = [
-  { href: '#', label: 'Webcasts' },
+  { href: '/opinion', label: 'Opinion' },
+  { href: '/women-to-watch', label: 'Women to Watch' },
+  { href: '/magazine', label: 'Magazine' },
+  { href: '/events', label: 'Events' },
   { href: '#', label: 'Awards' },
-  { href: '#', label: 'Events' },
+  { href: '#', label: 'Video & Podcasts' },
+  { href: '#', label: 'Webcasts' },
 ];
 
 const topics = [
