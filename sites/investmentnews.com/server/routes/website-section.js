@@ -4,7 +4,7 @@ const upcoming = require('@bonhill-group/package-global/templates/website-sectio
 const section = require('../templates/website-section');
 
 module.exports = (app) => {
-  app.get('/:alias(resources/conferences)', withWebsiteSection({
+  app.get('/:alias(events)', withWebsiteSection({
     template: upcoming,
     queryFragment,
   }));
