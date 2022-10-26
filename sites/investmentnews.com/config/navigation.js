@@ -11,13 +11,13 @@ const topics = [
 ];
 
 const resources = [
+  { href: 'https://data.investmentnews.com/ria/', label: 'RIA Data Center', target: '_blank' },
   { href: '/opinion', label: 'Opinion' },
   { href: 'https://womentowatchaward.com/', label: 'Women to Watch', target: '_blank' },
   { href: '#', label: 'Magazine' },
   { href: '/events', label: 'Events' },
   { href: '#', label: 'Awards' },
-  { href: '#', label: 'Video & Podcasts' },
-  { href: '#', label: 'Webcasts' },
+  { href: '#', label: 'Multimedia' },
 ];
 
 const utilities = [
