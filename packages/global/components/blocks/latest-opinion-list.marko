@@ -4,7 +4,7 @@ import queryFragment from "../../graphql/fragments/latest-opinion-list";
 
 $ const modifiers = ["latest-content-list", "latest-opinion-list", ...(input.modifiers ? input.modifiers : [])];
 $ const title = defaultValue(input.title, 'Latest in');
-$ const withSection = defaultValue(input.withSection, true);
+$ const withSection = defaultValue(input.withSection, false);
 $ const withNativeXSection = defaultValue(input.withNativeXSection, true);
 $ const nodeInput = {
   withTeaser: false,
