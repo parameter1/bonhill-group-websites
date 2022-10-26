@@ -1,6 +1,15 @@
 const subscribe = require('./subscribe');
 const privacyPolicy = require('./privacy-policy');
 
+const topics = [
+  { href: '/retirement', label: 'Retirement' },
+  { href: '/investing', label: 'Investing' },
+  { href: '/practice-management', label: 'Practice Management' },
+  { href: '/industry', label: 'Industry' },
+  { href: '/fintech', label: 'FinTech' },
+  { href: '/regulation-legislation', label: 'Regulation & Legislation' },
+];
+
 const resources = [
   { href: '/opinion', label: 'Opinion' },
   { href: 'https://womentowatchaward.com/', label: 'Women to Watch', target: '_blank' },
@@ -11,13 +20,9 @@ const resources = [
   { href: '#', label: 'Webcasts' },
 ];
 
-const topics = [
-  { href: '/retirement', label: 'Retirement' },
-  { href: '/investing', label: 'Investing' },
-  { href: '/practice-management', label: 'Practice Management' },
-  { href: '/industry', label: 'Industry' },
-  { href: '/fintech', label: 'FinTech' },
-  { href: '/regulation-legislation', label: 'Regulation & Legislation' },
+const utilities = [
+  { href: 'https://industrialmedia.dragonforms.com/loading.do?omedasite=ien_signup', label: 'Newsletter Signup', target: '_blank' },
+  { href: 'https://tcc.dragonforms.com/loading.do?omedasite=TCC1_IEnew', label: 'Subscribe to Magazine', target: '_blank' },
 ];
 
 const retirement = [
@@ -221,26 +226,47 @@ module.exports = {
       },
     },
   ],
+  // toggleMenu: {
+  //   col1: {
+  //     label: 'Retirement',
+  //     items: [],
+  //   },
+  //   col2: {
+  //     label: 'Regulation',
+  //     items: [],
+  //   },
+  //   col3: {
+  //     label: 'Technology',
+  //     items: [],
+  //   },
+  //   col4: {
+  //     label: 'Topic 4',
+  //     items: [],
+  //   },
+  //   col5: {
+  //     label: 'Topic 5',
+  //     items: [],
+  //   },
+  // },
   toggleMenu: {
-    col1: {
-      label: 'Retirement',
-      items: [],
+    about: {
+      // label: 'About',
+      // items: utilities,
     },
-    col2: {
-      label: 'Regulation',
-      items: [],
+    leftColumn: {
+      label: 'Topics',
+      items: [
+        ...topics,
+      ],
     },
-    col3: {
-      label: 'Technology',
-      items: [],
+    midColumn: {
+      items: [
+        ...resources,
+      ],
     },
-    col4: {
-      label: 'Topic 4',
-      items: [],
-    },
-    col5: {
-      label: 'Topic 5',
-      items: [],
+    rightColumn: {
+      label: 'User Tools',
+      items: utilities,
     },
   },
   footer: {

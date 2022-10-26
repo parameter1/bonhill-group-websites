@@ -18,89 +18,80 @@ $ const hasUser = defaultValue(input.hasUser, false);
   <!-- desktop -->
   <marko-web-element block-name=blockName name="contents-desktop">
     <div class="row">
-      <div class="d-none d-md-flex col-md-2">
+      <div class="col-6 col-md-3">
         <!-- sections -->
-        <theme-site-menu-section
+        <default-theme-site-menu-section
           tag="nav"
           block-name=blockName
-          label=site.get("navigation.toggleMenu.col1.label")
-          items=site.getAsArray("navigation.toggleMenu.col1.items")
+          label=(site.get("navigation.toggleMenu.leftColumn.label") || "Topics")
+          items=site.getAsArray("navigation.toggleMenu.leftColumn.items")
           modifiers=["primary"]
           reg-enabled=regEnabled
           has-user=hasUser
         />
       </div>
-      <div class="d-none d-md-flex col-md-2">
+      <div class="d-none d-md-flex col-md-3">
         <!-- sections -->
-        <theme-site-menu-section
+        <default-theme-site-menu-section
           tag="nav"
           block-name=blockName
-          label=site.get("navigation.toggleMenu.col2.label")
-          items=site.getAsArray("navigation.toggleMenu.col2.items")
+          label=(site.get("navigation.toggleMenu.midColumn.label") || "Resources")
+          items=site.getAsArray("navigation.toggleMenu.midColumn.items")
           modifiers=["primary"]
           reg-enabled=regEnabled
           has-user=hasUser
         />
       </div>
-      <div class="d-none d-md-flex col-md-2">
-        <theme-site-menu-section
-          tag="nav"
-          block-name=blockName
-          label=site.get("navigation.toggleMenu.col3.label")
-          items=site.getAsArray("navigation.toggleMenu.col3.items")
-          modifiers=["primary"]
-          reg-enabled=regEnabled
-          has-user=hasUser
-        />
-      </div>
-      <div class="d-none d-md-flex col-md-2">
-        <theme-site-menu-section
-          tag="nav"
-          block-name=blockName
-          label=site.get("navigation.toggleMenu.col4.label")
-          items=site.getAsArray("navigation.toggleMenu.col4.items")
-          modifiers=["primary"]
-          reg-enabled=regEnabled
-          has-user=hasUser
-        />
-      </div>
-      <div class="d-none d-md-flex col-md-2">
-        <theme-site-menu-section
-          tag="nav"
-          block-name=blockName
-          label=site.get("navigation.toggleMenu.col5.label")
-          items=site.getAsArray("navigation.toggleMenu.col5.items")
-          modifiers=["primary"]
-          reg-enabled=regEnabled
-          has-user=hasUser
-        />
-      </div>
-      <div class="d-none d-md-flex col-md-2">
+      <div class="d-none d-md-flex col-md-6">
         <marko-web-element
           block-name=blockName
           name="section"
           tag="nav"
           modifiers=["primary"]
         >
-          <theme-site-menu-header block-name=blockName>
-            User Tools
-          </theme-site-menu-header>
-          <theme-site-menu-section
+          <!-- Right Column Header -->
+          <default-theme-site-menu-header block-name=blockName>
+            ${ site.get("navigation.toggleMenu.rightColumn.label") || "User Tools" }
+          </default-theme-site-menu-header>
+          <!-- Identity X navigation Items -->
+          <!-- Identity X navigation Items -->
+          <default-theme-site-menu-section
             tag="nav"
             block-name=blockName
-            items=site.getAsArray("navigation.user.tools")
+            items=site.getAsArray("navigation.user.items")
             modifiers=["user"]
             reg-enabled=regEnabled
             has-user=hasUser
           />
+          <!-- Social Follow Label & items -->
           <social-icons block-name=blockName title="Follow Us" />
+          <!-- Toggle Menu Right Column Items -->
+          <default-theme-site-navbar-items
+            block-name=blockName
+            items=site.getAsArray("navigation.toggleMenu.rightColumn.items")
+            reg-enabled=regEnabled
+            has-user=hasUser
+          />
         </marko-web-element>
       </div>
     </div>
   </marko-web-element>
   <!-- mobile -->
   <marko-web-element block-name=blockName name="contents-mobile">
-    <theme-site-menu-section
+    <!-- primary section -->
+    <!-- Identity X navigation Items -->
+    <default-theme-site-menu-section
+      tag="nav"
+      block-name=blockName
+      items=site.getAsArray("navigation.user.items")
+      modifiers=["user"]
+      reg-enabled=regEnabled
+      has-user=hasUser
+    />
+    <!-- social -->
+    <social-icons block-name=blockName />
+    <!-- primary section -->
+    <default-theme-site-menu-section
       tag="nav"
       block-name=blockName
       items=site.getAsArray("navigation.mobileMenu.primary")
@@ -108,7 +99,8 @@ $ const hasUser = defaultValue(input.hasUser, false);
       reg-enabled=regEnabled
       has-user=hasUser
     />
-    <theme-site-menu-section
+    <!-- secondary section -->
+    <default-theme-site-menu-section
       tag="nav"
       block-name=blockName
       items=site.getAsArray("navigation.mobileMenu.secondary")
@@ -116,15 +108,5 @@ $ const hasUser = defaultValue(input.hasUser, false);
       reg-enabled=regEnabled
       has-user=hasUser
     />
-    <theme-site-menu-section
-      tag="nav"
-      block-name=blockName
-      items=site.getAsArray("navigation.user.tools")
-      modifiers=["user"]
-      reg-enabled=regEnabled
-      has-user=hasUser
-    />
-    <!-- social -->
-    <social-icons block-name=blockName />
   </marko-web-element>
 </marko-web-block>
