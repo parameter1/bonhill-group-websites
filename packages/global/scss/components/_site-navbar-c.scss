@@ -113,6 +113,7 @@
     &__items {
       &--primary {
         font-size: 13px;
+        font-family: $theme-item-title-font-family;
       }
     }
     &--secondary {
