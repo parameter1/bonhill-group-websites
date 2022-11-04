@@ -531,3 +531,10 @@ label {
     }
   }
 }
+
+// Override default container width
+@media (min-width: 1080px) {
+  .document-container {
+    max-width: 1300px;
+  }
+}
