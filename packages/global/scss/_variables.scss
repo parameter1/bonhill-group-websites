@@ -51,6 +51,10 @@ $typography: (
   "header-1.5": (
     "font-family": $theme-item-title-font-family,
   ),
+  "header-2": (
+    "font-family": $theme-item-title-font-family,
+    "text-transform": uppercase,
+  ),
   "article-text": (
     "line-height": 1.125,
     "font-size": 16px,
@@ -71,7 +75,7 @@ $typography: (
   "section-header": (
     "font-family": $theme-item-title-font-family,
   ),
-  "section-header-small": (
+  "section-header-small__header": (
     "font-family": $theme-item-title-font-family,
   )
   // DROP DOWN MENU PROPs
