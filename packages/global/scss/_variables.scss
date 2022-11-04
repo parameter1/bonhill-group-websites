@@ -38,11 +38,16 @@
   src: url("https://img.forconstructionpros.com/files/base/bonhill/all/fonts/helvetica/HelveticaNeue-BlackCond.woff2") format("woff2"),
 }
 
+@font-face {
+  font-family: "HelveticaNeue Roman";
+  src: url("https://img.forconstructionpros.com/files/base/bonhill/all/fonts/helvetica/HelveticaNeue-Roman.woff2") format("woff2");
+}
+
 $skin-font-family-primary: "Helvetica 57 Condensed", sans-serif !default;
 $skin-font-family-secondary: "Helvetica 47 Light Condensed", sans-serif !default;
 
 $theme-item-title-font-family: "HelveticaNeue 97 Black Condensed", sans-serif;;
-
+$theme-content-body-font: "HelveticaNeue Roman", sans-serif;
 // Override monorails typography font families
 $typography: (
   "header-1": (
@@ -55,11 +60,16 @@ $typography: (
     "font-family": $theme-item-title-font-family,
     "text-transform": uppercase,
   ),
+  "header-3": (
+    "font-family": $theme-item-title-font-family,
+  ),
   "article-text": (
+    "font-family": $theme-content-body-font,
     "line-height": 1.125,
     "font-size": 16px,
   ),
   "small-body-text": (
+    "font-family": $theme-content-body-font,
     "line-height": 1.125,
     "font-size": 14px,
   ),
