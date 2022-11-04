@@ -8,6 +8,8 @@
 // Fonts
 $skin-font-family-primary: "Fira Sans", "Fira Sans-fallback", sans-serif !default;
 $skin-font-family-secondary: "Fira Sans", "Fira Sans-fallback", sans-serif !default;
+// Only set to override the 700px max.  Need to figure out how to remove this all together.
+$skin-content-body-max-width: 1000px;
 
 // Navbar
 $navbarStyle: "navbar-c" !default;
