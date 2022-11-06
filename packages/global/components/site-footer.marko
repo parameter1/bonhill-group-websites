@@ -19,7 +19,7 @@ $ const tagline = site.get("tagline");
   modifiers=input.modifiers
   attrs=input.attrs
 >
-  <default-theme-site-footer-container block-name=blockName modifiers=["brand-logos"]>
+  <theme-site-footer-container block-name=blockName modifiers=["brand-logos"]>
     <marko-web-element block-name=blockName name="inner-container">
       <if(brandLogos.length)>
         <div class="row brand-logos">
@@ -41,8 +41,8 @@ $ const tagline = site.get("tagline");
         </div>
       </if>
       <else>
-        <default-theme-site-navbar-brand block-name=blockName title=`${config.website("name")} Homepage`>
-          <default-theme-site-navbar-logo
+        <theme-site-navbar-brand block-name=blockName title=`${config.website("name")} Homepage`>
+          <theme-site-navbar-logo
             block-name=blockName
             alt=config.website("name")
             src=site.get("logos.footer.src")
@@ -51,11 +51,11 @@ $ const tagline = site.get("tagline");
             height=site.get("logos.footer.height")
             lazyload=true
           />
-        </default-theme-site-navbar-brand>
+        </theme-site-navbar-brand>
       </else>
     </marko-web-element>
-  </default-theme-site-footer-container>
-  <default-theme-site-footer-container block-name=blockName modifiers=["secondary"] attrs={ "aria-label": "Secondary Footer" }>
+  </theme-site-footer-container>
+  <theme-site-footer-container block-name=blockName modifiers=["secondary"] attrs={ "aria-label": "Secondary Footer" }>
     <marko-web-element block-name=blockName name="inner-container">
       <if(tagline)>
         <marko-web-element block-name=blockName name="tagline" modifiers="tagline">${tagline}</marko-web-element>
@@ -153,8 +153,8 @@ $ const tagline = site.get("tagline");
         </div>
       </div>
     </marko-web-element>
-  </default-theme-site-footer-container>
-  <default-theme-site-footer-container block-name=blockName modifiers=["primary"] attrs={ "aria-label": "Primary Footer" }>
+  </theme-site-footer-container>
+  <theme-site-footer-container block-name=blockName modifiers=["primary"] attrs={ "aria-label": "Primary Footer" }>
     <marko-web-element block-name=blockName name="inner-container">
       <theme-social-follow dark=false modifiers=["site-footer"] />
 
@@ -170,10 +170,10 @@ $ const tagline = site.get("tagline");
         </for>
       </theme-breadcrumbs>
 
-      <default-theme-site-footer-copyright
+      <theme-site-footer-copyright
         company=site.get("company")
         notice=site.get("copyrightNotice")
       />
     </marko-web-element>
-  </default-theme-site-footer-container>
+  </theme-site-footer-container>
 </marko-web-block>
