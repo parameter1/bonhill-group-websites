@@ -34,59 +34,81 @@
 
 // Content Header Font Inclusion
 @font-face {
-  font-family:"HelveticaNeue 97 Black Condensed";
+  font-family: "Helvetica 97 Black Condensed";
   src: url("https://img.forconstructionpros.com/files/base/bonhill/all/fonts/helvetica/HelveticaNeue-BlackCond.woff2") format("woff2"),
 }
 
 @font-face {
-  font-family: "HelveticaNeue Roman";
+  font-family: "Helvetica 95 Black";
+  src: url("https://img.forconstructionpros.com/files/base/bonhill/all/fonts/helvetica/HelveticaNeue-Black.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Helvetica 55 Roman";
   src: url("https://img.forconstructionpros.com/files/base/bonhill/all/fonts/helvetica/HelveticaNeue-Roman.woff2") format("woff2");
 }
 
 $skin-font-family-primary: "Helvetica 57 Condensed", sans-serif !default;
 $skin-font-family-secondary: "Helvetica 47 Light Condensed", sans-serif !default;
 
-$theme-item-title-font-family: "HelveticaNeue 97 Black Condensed", sans-serif;;
-$theme-content-body-font: "HelveticaNeue Roman", sans-serif;
+// $theme-item-title-font-family: "HelveticaNeue 97 Black Condensed", sans-serif;
+$theme-content-body-font: "Helvetica 55 Roman", sans-serif;
+$black: #000;
+$body-color: $black;
+
 // Override monorails typography font families
+$theme-heading-font-family: "Helvetica 97 Black Condensed", sans-serif;
+$theme-page-deck-line-height-sm: 1.2;
+$theme-page-deck-line-height: 1.2;
+
 $typography: (
   "header-1": (
-    "font-family": $theme-item-title-font-family,
+    "color": $black,
+    "font-family": $theme-heading-font-family,
   ),
   "header-1.5": (
-    "font-family": $theme-item-title-font-family,
+    "color": $black,
+    "font-family": $theme-heading-font-family,
   ),
   "header-2": (
-    "font-family": $theme-item-title-font-family,
+    "color": $black,
+    "font-family": $theme-heading-font-family,
     "text-transform": uppercase,
   ),
   "header-3": (
-    "font-family": $theme-item-title-font-family,
+    "color": $black,
+    "font-family": $theme-heading-font-family,
   ),
   "article-text": (
+    "color": $black,
     "font-family": $theme-content-body-font,
-    "line-height": 1.125,
-    "font-size": 16px,
+    "line-height": 1.4,
+    "font-size": 18px,
   ),
   "small-body-text": (
+    "color": $black,
     "font-family": $theme-content-body-font,
     "line-height": 1.125,
     "font-size": 14px,
   ),
   "teaser-text-1": (
+    "color": $black,
     "line-height": 1.125,
     "font-size": 16px,
   ),
   "slug-medium": (
-    "font-family": $theme-item-title-font-family,
+    "color": $primary,
+    // "font-family": $theme-item-title-font-family,
     "line-height": 1.1125,
-    "font-size": 12px,
+    "font-size": 14px,
   ),
   "section-header": (
-    "font-family": $theme-item-title-font-family,
+    "color": $black,
+    // "font-family": $theme-item-title-font-family,
   ),
   "section-header-small__header": (
-    "font-family": $theme-item-title-font-family,
+    "color": $black,
+    // "font-family": $theme-item-title-font-family,
   )
   // DROP DOWN MENU PROPs
   // "menu-item-primary": (

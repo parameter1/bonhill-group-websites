@@ -185,8 +185,9 @@ label {
 //   max-width: none;
 // }
 .page-wrapper {
-  &__content-name {
-    max-width: 850px;
+  &__content-name, &__deck {
+    max-width: 950px;
+    margin-bottom: 1rem;
   }
 }
 // End right rail content layout CSS
@@ -225,6 +226,9 @@ label {
         margin-left: -16px;
       }
     }
+    &--first-sm {
+      margin-bottom: 0;
+    }
   }
   .details__image {
     clear: both;
@@ -241,7 +245,7 @@ label {
 .ad-container {
   $self: &;
 
-  $container-bottom-padding: 30px;
+  $container-bottom-padding: 10px;
   $wrapper-first-child-padding: 16px;
   $label-bottom-padding: 4px;
   $label-font-size: 10px;
@@ -278,17 +282,6 @@ label {
       display: none;
     }
   }
-  &--with-label {
-    > *:first-child {
-      &::before {
-        font-size: 12px;
-        color: $gray-500;
-        text-transform: none;
-        content: "Advertisement";
-        padding-bottom: 1rem;
-      }
-    }
-  }
   &--inline-section-feed {
     min-height: 250px + $container-height;
     margin-bottom: 0;
@@ -298,6 +291,14 @@ label {
     > *:first-child {
       padding-bottom: 30px;
       border-bottom: 1px solid $skin-ad-bg-color;
+    }
+  }
+  &--template-leaderboard {
+    min-height: 90px + $container-height;
+    background-color: #fff;
+    > *:first-child {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }
@@ -537,4 +538,8 @@ label {
   .document-container {
     max-width: 1300px;
   }
+}
+
+.sticky-top {
+  top: 1rem;
 }
