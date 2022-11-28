@@ -294,11 +294,14 @@ label {
     }
   }
   &--template-leaderboard {
-    min-height: 90px + $container-height;
+    min-height: $leaderboard-min-height-mobile + $container-height;
     background-color: #fff;
     > *:first-child {
       padding-top: 0;
       padding-bottom: 0;
+    }
+    @media (min-width: 980px) {
+      min-height: $leaderboard-min-height-desktop + $container-height;
     }
   }
 }
