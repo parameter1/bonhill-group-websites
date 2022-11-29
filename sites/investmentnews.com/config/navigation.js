@@ -166,10 +166,10 @@ module.exports = {
   mobileMenu,
   topics,
   primary: {
-    items: resources,
+    items: topics,
   },
   secondary: {
-    items: topics,
+    items: resources,
   },
   tertiary: {
     items: [],
@@ -177,9 +177,7 @@ module.exports = {
   contexts: [
     {
       when: ['/retirement'],
-      secondary: {
-        items: topics,
-      },
+      secondary: { items: resources },
       tertiary: { items: [] },
       primary: {
         items: retirement,
@@ -187,7 +185,7 @@ module.exports = {
     },
     {
       when: ['/investing'],
-      secondary: { items: topics },
+      secondary: { items: resources },
       tertiary: { items: [] },
       primary: {
         items: investing,
@@ -195,7 +193,7 @@ module.exports = {
     },
     {
       when: ['/practice-management'],
-      secondary: { items: topics },
+      secondary: { items: resources },
       tertiary: { items: [] },
       primary: {
         items: practiceManagement,
@@ -203,7 +201,7 @@ module.exports = {
     },
     {
       when: ['/industry'],
-      secondary: { items: topics },
+      secondary: { items: resources },
       tertiary: { items: [] },
       primary: {
         items: industry,
@@ -211,7 +209,7 @@ module.exports = {
     },
     {
       when: ['/fintech'],
-      secondary: { items: topics },
+      secondary: { items: resources },
       tertiary: { items: [] },
       primary: {
         items: fintech,
@@ -219,7 +217,7 @@ module.exports = {
     },
     {
       when: ['/regulation-legislation'],
-      secondary: { items: topics },
+      secondary: { items: resources },
       tertiary: { items: [] },
       primary: {
         items: regulationLegislation,
