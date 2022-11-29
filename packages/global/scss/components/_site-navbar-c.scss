@@ -112,7 +112,7 @@
     }
     &__items {
       &--primary {
-        font-size: 13px;
+        font-size: $theme-site-navbar-primary-font-size;
         font-family: $theme-item-title-font-family;
         justify-content: center;
       }
