@@ -38,14 +38,5 @@
     "@alias": "string",
     "@name": "string",
     "@page-node": "object"
-  },
-  "<global-website-section-products-layout>": {
-    "template": "./products.marko",
-    "<rail-slot-a>": {},
-    "@sections <section>[]": {},
-    "@id": "number",
-    "@alias": "string",
-    "@name": "string",
-    "@page-node": "object"
   }
 }
