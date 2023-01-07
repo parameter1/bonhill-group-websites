@@ -552,3 +552,12 @@ $max-container-width: 1300px;
 .sticky-top {
   top: 1rem;
 }
+
+.site-menu {
+  $self: &;
+  top: $theme-site-navbar-logo-height-sm;
+  @media (min-width: $skin-desktop-menu-breakpoint) {
+    top: $theme-site-navbar-logo-height-sm + 26px;
+    z-index: 15000;
+  }
+}
