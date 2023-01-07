@@ -1,9 +1,8 @@
 $ const { config } = out.global;
 
-$ const type = "profile";
-$ const title = "User profile";
-$ const description = `${config.siteName()} User Profile`;
-$ const callToAction = 'To complete your profile, please fill out the required fields & select your email subscriptions.'
+$ const type = "login";
+$ const title = "Log in";
+$ const description = `Log in to ${config.siteName()}`;
 
 <marko-web-default-page-layout type=type title=title description=description>
   <@head>
@@ -15,7 +14,7 @@ $ const callToAction = 'To complete your profile, please fill out the required f
     <marko-web-page-wrapper>
       <@section>
         <h1 class="page-wrapper__title">${description}</h1>
-        <marko-web-identity-x-form-profile call-to-action=callToAction />
+        <marko-web-identity-x-form-login />
       </@section>
     </marko-web-page-wrapper>
   </@page>
