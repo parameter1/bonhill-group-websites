@@ -14,9 +14,19 @@ $ const recommended = site.get("recommended");
 
     $ const recommendedAlias = userContentAlias || input.alias;
     $ const recommendedTitle = (user.givenName) ? `Recommended for ${user.givenName}` : title;
-    <theme-latest-content-list-block title=recommendedTitle alias=recommendedAlias class=input.class />
+    <theme-latest-content-list-block
+      title=recommendedTitle
+      alias=recommendedAlias
+      query-params=input.queryParams
+      class=input.class
+    />
   </if>
   <else-if(input.alias)>
-    <theme-latest-content-list-block title=title alias=input.alias class=input.class />
+    <theme-latest-content-list-block
+      title=title
+      alias=input.alias
+      query-params=input.queryParams
+      class=input.class
+    />
   </else-if>
 </marko-web-identity-x-context>
