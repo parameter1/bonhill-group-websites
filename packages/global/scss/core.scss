@@ -561,3 +561,12 @@ $max-container-width: 1300px;
     z-index: 15000;
   }
 }
+
+.ad-container {
+  &--inter-block {
+    @media (min-width: 1080px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
