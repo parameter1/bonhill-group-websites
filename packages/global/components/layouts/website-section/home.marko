@@ -145,7 +145,11 @@ $ const promise = websiteSectionContentLoader(apollo, {
                 requires-image=true
               />
               <@rail>
-                <theme-recommended-content-list-block class="sticky-top" />
+                <theme-recommended-content-list-block
+                  alias="fintech"
+                  query-params={ excludeContentIds: sectionContent.ids }
+                  class="sticky-top"
+                />
               </@rail>
               <@rail>
                 <global-most-popular-list-block class="sticky-top" />
