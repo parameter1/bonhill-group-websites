@@ -3,6 +3,7 @@ const identityX = require('./identity-x');
 const nativeX = require('./native-x');
 const navigation = require('./navigation');
 const newsletter = require('./newsletter');
+const recommended = require('./recommended');
 const search = require('./search');
 
 module.exports = {
@@ -12,6 +13,7 @@ module.exports = {
   nativeX,
   navigation,
   newsletter,
+  recommended,
   search,
   // Site configs
   company: 'Bonhill Group',
