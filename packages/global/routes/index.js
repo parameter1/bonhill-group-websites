@@ -10,7 +10,6 @@ const redirects = require('./redirects');
 const staticPage = require('./static-page');
 
 module.exports = (app, siteConfig) => {
-
   // Feed
   feed(app);
 
