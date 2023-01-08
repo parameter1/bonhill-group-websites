@@ -7,25 +7,4 @@ $ const { id, alias, name, pageNode } = input;
   alias=alias
   name=name
   page-node=pageNode
->
-  <@section>
-    <marko-web-identity-x-context|{ hasUser, isEnabled, user }|>
-      $ console.log(user)
-      $ const industry = user.customSelectFieldAnswers.filter((q) => q.id === "63b8e030a517db27b9bf6b74")[0].answers.map(x => x.id);
-      $ console.log(industry);
-      $ const demoToSectionAlias = {
-        "63b8e0c31815827cde6f0f1e": "retirement", // Financial Planner/Adviser
-        "63b8e0c318158211de6f0f1d": "investing", // Registered Representative/Securities Broker
-        "63b8e0c318158262686f0f1c": "practice-management", // Owner/Partner/Manager
-        "63b8e0c318158266db6f0f1b": "industry", // Insurance Agent/Broker
-        "63b8e0c31815822f106f0f1a": "fintech", // CPA
-        "63b8e0c318158276d26f0f19": "regulation-legislation", // Bank Trust Officer
-      };
-      $ const userContentAlias = demoToSectionAlias[`${industry[0]}`];
-      $ const personTitle = `More just for you(\`${userContentAlias}\`)`;
-      <if(userContentAlias)>
-        <theme-latest-content-list-block title=personTitle alias=userContentAlias />
-      </if>
-    </marko-web-identity-x-context>
-  </@section>
-</global-website-section-home-layout>
+/>
