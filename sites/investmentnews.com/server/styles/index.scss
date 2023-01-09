@@ -17,15 +17,18 @@ $primary: #dc0d23;
     #{ $self }__link[href="/user/profile"] > span {
       @include theme-toggle-button();
       display: flex;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
-      height: 40px;
+
       width: 40px;
+      height: 40px;
+
       background-color: #f0f1f2;
-      border-radius: 4px;
+
       padding: 0;
       margin: 0 0 0 12px;
+      border-radius: 4px;
       font-size: 1rem;
     }
   }
