@@ -124,8 +124,10 @@ module.exports = {
         modifiers: ['user'],
       },
       {
-        href: '/user/logout',
-        label: 'Sign Out',
+        href: '/user/profile',
+        class: 'btn btn-lg',
+        label: 'profile',
+        icon: 'person',
         when: 'logged-in',
         modifiers: ['user'],
       },
