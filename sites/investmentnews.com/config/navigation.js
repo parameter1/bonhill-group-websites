@@ -131,6 +131,12 @@ module.exports = {
         when: 'logged-in',
         modifiers: ['user'],
       },
+      {
+        href: '/user/logout',
+        label: 'Sign Out',
+        when: 'logged-in',
+        modifiers: ['user'],
+      },
     ],
     tools: [
       {

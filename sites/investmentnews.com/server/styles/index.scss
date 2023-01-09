@@ -28,5 +28,28 @@ $primary: #dc0d23;
       background-color: #f0f1f2;
       border-radius: 4px;
     }
+    #{ $self }__link[href="/user/logout"] {
+      display: none;
+    }
+    #{ $self }__link[href="/user/login"],
+    #{ $self }__link[href="/user/login"]:hover,
+    #{ $self }__link[href="/user/login"]:focus {
+      color: $white;
+    }
+    #{ $self }__link[href="/user/login"] > span {
+      @include theme-toggle-button();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: 40px;
+      padding: 0 8px;
+      margin: 0 0 0 12px;
+      font-size: 1rem;
+      color: $white;
+      background-color: $primary;
+      border-radius: 4px;
+    }
   }
 }
