@@ -7,7 +7,7 @@ on:
 
 env:
   ECR_REGISTRY: 598984531759.dkr.ecr.us-east-2.amazonaws.com
-  IMG_PREFIX: bohill-group
+  IMG_PREFIX: bonhill-group
 
 jobs:
   vars:
