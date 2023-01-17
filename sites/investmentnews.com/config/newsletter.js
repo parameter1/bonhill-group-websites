@@ -7,13 +7,13 @@ module.exports = {
   signupBannerLarge: {
     ...baseConfig,
     name: 'Don’t Miss Out',
-    description: 'Breaking, business, and industry news about the clinical lab community.',
+    description: 'Actionable intelligence that empowers financial advisers.',
   },
   signupFooter: {
     ...baseConfig,
     colspan: 5,
     enable: true,
     name: 'Stay Connected',
-    description: 'Breaking, business, and industry news about the clinical lab community.',
+    description: 'News, analysis and information essential to financial advisers.',
   },
 };

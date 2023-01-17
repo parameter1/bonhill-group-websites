@@ -1,11 +1,11 @@
 module.exports = {
   contentTypes: ['Article', 'Company', 'Event'],
   assignedToWebsiteSectionIds: [
-    83689,
-    83690,
-    83691,
-    83692,
-    83693,
-    83694,
+    142630,
+    142631,
+    142632,
+    142633,
+    142634,
+    142635,
   ],
 };

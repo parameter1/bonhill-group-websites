@@ -23,13 +23,14 @@ $ const perPage = 12;
     </theme-section-feed-block>
   </@head>
 
-  <!-- <@section|{ aliases }| modifiers=["break-container", "first"]>
-    <global-leaderboard-ad-block
-      position="home_page"
+  <@section|{ aliases }| modifiers=["first-sm"]>
+    <theme-gam-define-display-ad
+      name="leaderboard"
+      position="section_page"
       aliases=aliases
-      modifiers=["inter-block", "combined-leaderboard"]
+      modifiers=["inter-block"]
     />
-  </@section> -->
+  </@section>
 
   <@section|{ blockName, section, aliases }|>
     <if(input.beforeName)>
@@ -53,7 +54,18 @@ $ const perPage = 12;
       />
     </if>
 
-    <global-section-feed-wrapper aliases=aliases alias=alias />
+    <global-section-feed-wrapper aliases=aliases alias=alias>
+      <@rail>
+        <global-latest-opinion-list-block
+          title="Opinion"
+          alias="opinion"
+          class="sticky-top"
+        />
+      </@rail>
+      <@rail>
+        <theme-recommended-content-list-block class="sticky-top" />
+      </@rail>
+    </global-section-feed-wrapper>
   </@section>
 
   <for|s| of=sections>

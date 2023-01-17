@@ -185,8 +185,9 @@ label {
 //   max-width: none;
 // }
 .page-wrapper {
-  &__content-name {
-    max-width: 850px;
+  &__content-name, &__deck {
+    max-width: 950px;
+    margin-bottom: 1rem;
   }
 }
 // End right rail content layout CSS
@@ -225,6 +226,9 @@ label {
         margin-left: -16px;
       }
     }
+    &--first-sm {
+      margin-bottom: 0;
+    }
   }
   .details__image {
     clear: both;
@@ -241,7 +245,7 @@ label {
 .ad-container {
   $self: &;
 
-  $container-bottom-padding: 30px;
+  $container-bottom-padding: 10px;
   $wrapper-first-child-padding: 16px;
   $label-bottom-padding: 4px;
   $label-font-size: 10px;
@@ -278,17 +282,6 @@ label {
       display: none;
     }
   }
-  &--with-label {
-    > *:first-child {
-      &::before {
-        font-size: 12px;
-        color: $gray-500;
-        text-transform: none;
-        content: "Advertisement";
-        padding-bottom: 1rem;
-      }
-    }
-  }
   &--inline-section-feed {
     min-height: 250px + $container-height;
     margin-bottom: 0;
@@ -298,6 +291,17 @@ label {
     > *:first-child {
       padding-bottom: 30px;
       border-bottom: 1px solid $skin-ad-bg-color;
+    }
+  }
+  &--template-leaderboard {
+    min-height: $leaderboard-min-height-mobile + $container-height;
+    background-color: #fff;
+    > *:first-child {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    @media (min-width: 980px) {
+      min-height: $leaderboard-min-height-desktop + $container-height;
     }
   }
 }
@@ -357,6 +361,13 @@ label {
     .node-list {
       &__header {
         padding-top: 0;
+      }
+    }
+  }
+  &--latest-opinion-list {
+    .node {
+      &__image {
+        border: none;
       }
     }
   }
@@ -444,9 +455,6 @@ label {
       }
     }
   }
-  &__node:first-child {
-    padding-top: 0;
-  }
 }
 .section-feed-content-node {
   &__content-teaser {
@@ -461,42 +469,6 @@ label {
 }
 .reveal-ad {
   height: 298px;
-}
-
-.site-menu {
-  $self: &;
-  top: $theme-site-navbar-logo-height-sm;
-  @media (min-width: $skin-desktop-menu-breakpoint) {
-    top: $theme-site-navbar-logo-height-sm + 26px;
-    z-index: 15000;
-  }
-  &__section {
-    &--primary {
-      #{ $self } {
-        &__item {
-          @media (min-width: $skin-desktop-menu-breakpoint) {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
-  &__contents-desktop {
-    .social-follow__header,
-    #{ $self }__header,
-    #{ $self }__link {
-      font-size: 13px;
-      font-weight: 400;
-    }
-    .social-follow__header,
-    #{ $self }__header {
-      font-weight: 500;
-    }
-    .marko-web-icon--social-follow svg {
-      height: 24px;
-      width: 24px;
-    }
-  }
 }
 .page {
   &--content-event {
@@ -560,6 +532,41 @@ label {
     .btn {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+    }
+  }
+}
+
+// Override default container width
+$max-container-width: 1300px;
+@media (min-width: 1080px) {
+  .document-container {
+    max-width: $max-container-width;
+  }
+  .site-navbar {
+    &__container {
+      max-width: $max-container-width;
+    }
+  }
+}
+
+.sticky-top {
+  top: 1rem;
+}
+
+.site-menu {
+  $self: &;
+  top: $theme-site-navbar-logo-height-sm;
+  @media (min-width: $skin-desktop-menu-breakpoint) {
+    top: $theme-site-navbar-logo-height-sm + 26px;
+    z-index: 15000;
+  }
+}
+
+.ad-container {
+  &--inter-block {
+    @media (min-width: 1080px) {
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 }

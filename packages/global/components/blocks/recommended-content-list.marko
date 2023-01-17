@@ -1,0 +1,32 @@
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+$ const { site } = out.global;
+
+$ const title = defaultValue(input.title, "Recommended");
+$ const recommended = site.get("recommended");
+
+<marko-web-identity-x-context|{ hasUser, isEnabled, user }|>
+  <if(hasUser && recommended)>
+    $ const { questionId, sectionMap } = recommended;
+
+    $ const answerValue = user.customSelectFieldAnswers.filter((q) => q.id === questionId)[0].answers.map(x => x.id);
+    $ const userContentAlias = sectionMap[`${answerValue[0]}`];
+
+    $ const recommendedAlias = userContentAlias || input.alias;
+    $ const recommendedTitle = (user.givenName) ? `Recommended for ${user.givenName}` : title;
+    <theme-latest-content-list-block
+      title=recommendedTitle
+      alias=recommendedAlias
+      query-params=input.queryParams
+      class=input.class
+    />
+  </if>
+  <else-if(input.alias)>
+    <theme-latest-content-list-block
+      title=title
+      alias=input.alias
+      query-params=input.queryParams
+      class=input.class
+    />
+  </else-if>
+</marko-web-identity-x-context>

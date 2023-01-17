@@ -8,8 +8,14 @@
   "<global-content-meter-block>": {
     "template": "./content-meter.marko"
   },
+  "<global-latest-opinion-list-block>": {
+    "template": "./latest-opinion-list.marko"
+  },
   "<global-most-popular-list-block>": {
     "template": "./most-popular-list.marko"
+  },
+  "<theme-recommended-content-list-block>": {
+    "template": "./recommended-content-list.marko"
   },
   "<global-sponsors-block>": {
     "template": "./sponsors.marko",

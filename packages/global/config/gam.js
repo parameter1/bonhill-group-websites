@@ -1,7 +1,7 @@
 const GAMConfiguration = require('@parameter1/base-cms-marko-web-gam/config');
 
 module.exports = ({
-  accountId = '21873781324',
+  accountId = '6407152',
   basePath,
 } = {}) => {
   const config = new GAMConfiguration(accountId, { basePath });
@@ -23,7 +23,7 @@ module.exports = ({
     })
     .setTemplate('LEADERBOARD', {
       size: [
-        [970, 90],
+        [970, 250],
         [300, 100],
         [300, 250],
         [320, 50],
@@ -31,8 +31,8 @@ module.exports = ({
       ],
       sizeMapping: [
         { viewport: [980, 0], size: [[970, 250], [265, 149]] },
-        { viewport: [750, 0], size: [[265, 149]] },
-        { viewport: [300, 0], size: [[300, 250], [265, 149]] },
+        { viewport: [750, 0], size: [[300, 50], [265, 149]] },
+        { viewport: [300, 0], size: [[300, 50], [320, 50], [265, 149]] },
       ],
     })
     .setTemplate('ROTATION', {
