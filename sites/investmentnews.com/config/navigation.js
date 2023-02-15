@@ -2,12 +2,12 @@ const subscribe = require('./subscribe');
 const privacyPolicy = require('./privacy-policy');
 
 const topics = [
-  { href: '/retirement', label: 'Retirement' },
-  { href: '/investing', label: 'Investing' },
-  { href: '/practice-management', label: 'Practice Management' },
   { href: '/industry', label: 'Industry' },
+  { href: '/investing', label: 'Investing' },
+  { href: '/retirement', label: 'Retirement' },
   { href: '/fintech', label: 'FinTech' },
   { href: '/regulation-legislation', label: 'Regulation & Legislation' },
+  { href: '/practice-management', label: 'Practice Management' },
 ];
 
 const resources = [
@@ -25,80 +25,62 @@ const utilities = [
   { href: 'https://tcc.dragonforms.com/loading.do?omedasite=TCC1_IEnew', label: 'Subscribe to Magazine', target: '_blank' },
 ];
 
-const retirement = [
-  { href: '/retirement/401k', label: '401(k)' },
-  { href: '/retirement/403b-plans', label: '403(b)' },
-  { href: '/retirement/defined-benefit-plans', label: 'Defined-Benefit' },
-  { href: '/retirement/defined-contribution-plans', label: 'Defined-Contribution' },
-  { href: '/retirement/health-savings-accounts', label: 'HSAs' },
-  { href: '/retirement/individual-retirement-accounts', label: 'IRAs' },
-  { href: '/retirement/medicare', label: 'Medicare' },
-  { href: '/retirement/pooled-employer-plans', label: 'Pooled Employer' },
-  { href: '/retirement/retirement-plan-advisers', label: 'Retirement Plan Advisers' },
-  { href: '/retirement/social-security', label: 'Social Security' },
+const industry = [
+  { href: '/industry/rias', label: 'RIAs' },
+  { href: '/industry/broker-dealers', label: 'Broker-Dealers' },
+  { href: '/industry/independent-broker-dealers', label: 'Independent Broker-Dealers' },
+  { href: '/industry/wirehouses', label: 'Wirehouses' },
+  { href: '/industry/custodians', label: 'Custodians' },
+  { href: '/industry/money-managers', label: 'Money Managers' },
+  { href: '/industry/mergers-acquisitions', label: 'Mergers & Acquisitions' },
+  { href: '/industry/advisor-moves', label: 'Advisor Moves' },
 ];
 
 const investing = [
-  { href: '/investing/alternative-investments', label: 'Alternative' },
-  { href: '/investing/auction-rate-securities', label: 'Auction Rate Securities' },
-  { href: '/investing/commodities', label: 'Commodities' },
-  { href: '/investing/currencies', label: 'Currencies' },
-  { href: '/investing/digital-assets', label: 'Digital Assets' },
-  { href: '/investing/esg', label: 'ESG' },
-  { href: '/investing/economy', label: 'Economy' },
-  { href: '/investing/emerging-markets', label: 'Emerging Markets' },
   { href: '/investing/equities', label: 'Equities' },
-  { href: '/investing/faith-based-investing', label: 'Faith-based' },
   { href: '/investing/fixed-income', label: 'Fixed Income' },
-  // { href: '/investing/hedge-funds', label: 'Hedge Funds' },
-  // { href: '/investing/index-funds', label: 'Index Funds' },
-  // { href: '/investing/international-investing', label: 'International Investing' },
-  // { href: '/investing/investment-strategies', label: 'Investment Strategies' },
-  // { href: '/investing/managed-accounts', label: 'Managed Accounts' },
-  // { href: '/investing/money-market-funds', label: 'Money Market Funds' },
-  // { href: '/investing/mutual-funds-etfs', label: 'Mutual Funds & ETFs' },
-  // { href: '/investing/options-futures', label: 'Options & Futures' },
-  // { href: '/investing/private-equity-funds', label: 'Private Equity Funds' },
-  // { href: '/investing/real-estate-investment-trusts', label: 'Real Estate Investment Trusts' },
-  // { href: '/investing/socially-conscious-investing', label: 'Socially Conscious Investing' },
-  // { href: '/investing/volatility', label: 'Volatility' },
+  { href: '/investing/mutual-funds', label: 'Mutual Funds' },
+  { href: '/investing/etfs', label: 'ETFs' },
+  { href: '/investing/esg', label: 'ESG' },
+  { href: '/investing/REITs', label: 'reits' },
+  { href: '/investing/digital-assets', label: 'Digital Assets' },
+  { href: '/investing/alternative-assets', label: 'Alternative Assets' },
 ];
-const practiceManagement = [
-  { href: '/practice-management/behavioral-finance', label: 'Behavioral Finance' },
-  { href: '/practice-management/business-development', label: 'Business Development' },
-  { href: '/practice-management/careers', label: 'Careers' },
-  { href: '/practice-management/client-prospecting', label: 'Client Prospecting' },
-  { href: '/practice-management/client-servicing', label: 'Client Servicing' },
-  { href: '/practice-management/compensation-staffing', label: 'Compensation & Staffing' },
-  { href: '/practice-management/designations', label: 'Designations' },
-  // { href: '/practice-management/marketing', label: 'Marketing' },
-  // { href: '/practice-management/next-gen', label: 'Next Gen' },
-  // { href: '/practice-management/recruiting', label: 'Recruiting' },
-  // { href: '/practice-management/succession-planning', label: 'Succession Planning' },
-  // { href: '/practice-management/wfh-adviser', label: 'WFH Adviser' },
+
+const retirement = [
+  { href: '/retirement/retirement-planning', label: 'Retirement Planning' },
+  { href: '/retirement/defined-contribution-plans', label: 'Defined-Contribution' },
+  { href: '/retirement/defined-benefit-plans', label: 'Defined-Benefit' },
+  { href: '/retirement/insurance', label: 'Insurance' },
+  { href: '/retirement/trusts-estates', label: 'Trusts & Estates' },
+  { href: '/retirement/philanthropy', label: 'Philanthropy' },
+  { href: '/retirement/social-security-medicare', label: 'Social Security & Medicare' },
+  { href: '/retirement/tax-planning', label: 'Tax Planning' },
 ];
-const industry = [
-  { href: '/industry/adviser-moves', label: 'Adviser Moves' },
-  { href: '/industry/broker-dealers', label: 'Broker-Dealers' },
-  { href: '/industry/clearing-firms', label: 'Clearing Firms' },
-  { href: '/industry/custodians', label: 'Custodians' },
-  { href: '/industry/earnings', label: 'Earnings' },
-  { href: '/industry/independent-broker-dealers', label: 'Independent Broker-Dealers' },
-  // { href: '/industry/mergers-acquisitions', label: 'Mergers & Acquisitions' },
-  // { href: '/industry/regional-brokerages', label: 'Regional Brokerages' },
-  // { href: '/industry/registered-investment-advisers', label: 'Registered Investment Advisers' },
-  // { href: '/industry/wirehouses', label: 'Wirehouses' },
-];
+
 const fintech = [
+  { href: '/fintech/robo-advisors', label: 'Robo-advisors' },
   { href: '/fintech/cybersecurity', label: 'Cybersecurity' },
-  { href: '/fintech/hardware', label: 'Hardware' },
-  { href: '/fintech/online', label: 'Online' },
-  { href: '/fintech/social-media', label: 'Social Media' },
-  { href: '/fintech/software', label: 'Software' },
+  { href: '/fintech/enterprise-tech', label: 'Enterprise Tech' },
+  { href: '/fintech/startups-funding', label: 'Startups & Funding' },
 ];
+
 const regulationLegislation = [
   { href: '/regulation-and-legislation/regulation', label: 'Regulation' },
   { href: '/regulation-and-legislation/legislation', label: 'Legislation' },
+  { href: '/regulation-and-legislation/self-regulatory-organizations', label: 'Self-regulatory Organizations' },
+  { href: '/regulation-and-legislation/trade-groups-and-associations', label: 'Trade Groups and Associations' },
+  { href: '/regulation-and-legislation/policy', label: 'Policy' },
+  { href: '/regulation-and-legislation/taxes', label: 'Taxes' },
+  { href: '/regulation-and-legislation/law', label: 'Law' },
+];
+
+const practiceManagement = [
+  { href: '/practice-management/diversity-equity-inclusion', label: 'Diversity, Equity & Inclusion' },
+  { href: '/practice-management/women-advisor-community', label: 'Women Advisor Community' },
+  { href: '/practice-management/compensation-staffing-recruiting', label: 'Compensation, Staffing & Recruiting' },
+  { href: '/practice-management/business-development', label: 'Business Development' },
+  { href: '/practice-management/designations', label: 'Designations' },
 ];
 
 const mobileMenu = {
