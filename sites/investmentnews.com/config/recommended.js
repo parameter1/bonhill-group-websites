@@ -1,4 +1,3 @@
-
 module.exports = {
   questionId: '63b8e030a517db27b9bf6b74',
   sectionMap: {

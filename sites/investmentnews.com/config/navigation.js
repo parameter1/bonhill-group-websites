@@ -279,7 +279,6 @@ module.exports = {
     //   items: resources,
     // },
 
-
     // col3: {
     //   label: 'More',
     //   items: [
