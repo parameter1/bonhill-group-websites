@@ -8,7 +8,7 @@ $theme-site-header-breakpoints: (
 // Colors
 $primary: #dc0d23;
 
-@import "../../node_modules/@bonhill-group/package-global/scss/core";
+ @import "@bonhill-group/package-global/scss/core";
 
 // this makes the user icon display as a button
 .site-navbar {
