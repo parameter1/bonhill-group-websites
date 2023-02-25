@@ -16,7 +16,6 @@ x-env-defaults: &env
   NEW_RELIC_ENABLED: ${NEW_RELIC_ENABLED-0}
   NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY-(unset)}
   NODE_ENV: development
-  TENANT_KEY: bonhill_all
   SENDGRID_API_KEY: ${SENDGRID_API_KEY-(unset)}
   SENDGRID_DEV_TO: ${SENDGRID_DEV_TO-support@parameter1.com}
   YARN_CACHE_FOLDER: /.yarn-cache
@@ -72,12 +71,11 @@ services:
     <<: *site-cmd
     working_dir: /root/sites/investmentnews.com
     environment:
-      <<: [*env, *env-leonis]
+      <<: *env
       HOST: www-bonhill-in.dev.parameter1.com
       PORT: 80
       EXPOSED_PORT: 9971
       LIVERELOAD_PORT: 19971
-      SITE_ID: 635ac2b4da016482237f5d28
     hostname: www-bonhill-in.dev.parameter1.com
     ports:
       - "9971:80"
