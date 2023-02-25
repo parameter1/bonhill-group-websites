@@ -5,6 +5,17 @@
   "repository": "https://github.com/parameter1/bonhill-group-websites/tree/master/sites/investmentnews.com",
   "license": "MIT",
   "private": true,
+  "website": {
+    "id": "635ac2b4da016482237f5d28",
+    "tenant": "bonhill_all",
+    "account": "bonhill",
+    "stack": "leonis",
+    "key": "in",
+    "deploy": {
+      "staging": true,
+      "production": false
+    }
+  },
   "scripts": {
     "dev": "basecms-website dev --compile-dir ../../packages --watch-dir ../../packages",
     "build": "basecms-website build",
@@ -13,6 +24,14 @@
     "lint:fix": "yarn lint --fix",
     "test": "yarn lint && yarn compile --no-clean"
   },
+  "engines": {
+    "node": ">=14.15"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
   "dependencies": {
     "@bonhill-group/package-global": "^0.1.9",
     "@parameter1/base-cms-marko-core": "^4.2.0",
@@ -28,13 +47,5 @@
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
     "object-path": "^0.11.5"
-  },
-  "engines": {
-    "node": ">=14.15"
-  },
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ]
+  }
 }
