@@ -1,0 +1,91 @@
+import { get, getAsArray, getAsObject } from "@parameter1/base-cms-object-path";
+
+$ const { config, site } = out.global;
+
+$ const blockName = input.blockName || "site-header";
+
+$ const navigation = {
+  primary: site.getAsArray("navigation.primary.items"),
+  subscribeDropdown: site.getAsArray("navigation.subscribeDropdown.items"),
+  secondary: site.getAsArray("navigation.secondary.items"),
+  tertiary: site.getAsArray("navigation.tertiary.items"),
+};
+$ const promos = site.getAsArray("navigation.promos");
+$ const headerColClass = promos ? `col-lg-${4 - promos.slice(1).length}` : "col-lg-6";
+
+$ const idxPushdownTogglerProps = {
+  iconName: "person",
+  iconModifiers: ['lg', 'dark'],
+  // conditionally spread buttonClass based on user state.
+  ...(input.hasUser && { buttonClass: "site-navbar__idx-newsletter-toggler site-navbar__idx-newsletter-toggler--has-user"}),
+  ...(!input.hasUser && { buttonClass: "site-navbar__idx-newsletter-toggler site-navbar__idx-newsletter-toggler--without-user"})
+};
+
+<marko-web-block
+  name=blockName
+  tag=(input.tag || "header")
+  class=input.class
+  modifiers=input.modifiers
+  attrs=input.attrs
+>
+  <${input.aboveNav} />
+
+  <theme-site-navbar modifiers=["top"] attrs={ "aria-label": "Top Navigation" }>
+    <div class=`${headerColClass} site-navbar__left`>
+      <if(navigation.subscribeDropdown.length)>
+        <theme-menu-toggle-button
+          class="site-navbar__toggler btn btn--subscribe-dropdown"
+          targets=[".site-navbar__items--subscribe-dropdown"]
+          toggle-class="site-navbar__items--subscribe-dropdown-open"
+          icon-modifiers=["sm"]
+          after="Subscribe"
+          icon-name="plus"
+          expanded-icon-name="dash"
+        />
+        <theme-site-navbar-items
+          items=navigation.subscribeDropdown
+          modifiers=["subscribe-dropdown"]
+        />
+      </if>
+      <else>
+        <marko-web-browser-component name="IdentityXNewsletterToggleButton" ssr=true props=idxPushdownTogglerProps />
+      </else>
+    </div>
+    <div class=`${headerColClass} site-navbar__center`>
+      <theme-site-navbar-brand title=`${config.website("name")} Homepage`>
+
+        <theme-site-navbar-logo
+          alt=config.website("name")
+          src=site.get("logos.navbar.src")
+          srcset=site.getAsArray("logos.navbar.srcset").join(",")
+          width=site.get("logos.navbar.width")
+          height=site.get("logos.navbar.height")
+        />
+      </theme-site-navbar-brand>
+    </div>
+    <div class=`${headerColClass} site-navbar__right`>
+      <marko-web-link href="/search">
+        <button class="btn btn-lg" type="submit" aria-label="Search">
+          <marko-web-icon name="search" modifiers=["dark"] />
+        </button>
+      </marko-web-link>
+      <theme-menu-toggle-button
+        class="site-navbar__toggler"
+        targets=[".site-menu", "body"]
+        toggle-class="site-menu--open"
+        icon-modifiers=["lg"]
+        icon-name="three-bars"
+      />
+    </div>
+  </theme-site-navbar>
+
+  <theme-site-navbar modifiers=["primary"] attrs={ "aria-label": "Primary Navigation" }>
+    <theme-site-navbar-items
+      items=navigation.primary
+      modifiers=["primary"]
+      reg-enabled=input.regEnabled
+      has-user=input.hasUser
+    />
+  </theme-site-navbar>
+  <${input.belowNav} />
+</marko-web-block>
