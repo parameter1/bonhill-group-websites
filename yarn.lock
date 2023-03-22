@@ -1190,6 +1190,19 @@
   dependencies:
     "@parameter1/base-cms-utils" "^4.5.12"
 
+"@parameter1/base-cms-marko-web-theme-monorail-magazine@^4.11.3":
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/@parameter1/base-cms-marko-web-theme-monorail-magazine/-/base-cms-marko-web-theme-monorail-magazine-4.11.3.tgz#b8d6fbe6f4772bceefded1a1b2beaee02e995380"
+  integrity sha512-xHIbU/A6zs8WtK/HQTB/WBjdWNvxxr5SzcLYrCuTmYQmc6X3znVnrZoXXTlN0T4k0kUFUW1Gu9pK8+f9stDEJw==
+  dependencies:
+    "@parameter1/base-cms-marko-web-gtm" "^4.5.12"
+    "@parameter1/base-cms-object-path" "^4.5.12"
+    "@parameter1/base-cms-utils" "^4.5.12"
+    "@parameter1/base-cms-web-common" "^4.5.12"
+    graphql "^14.7.0"
+    graphql-tag "^2.12.6"
+    object-path "^0.11.8"
+
 "@parameter1/base-cms-marko-web-theme-monorail@^4.12.2":
   version "4.12.2"
   resolved "https://registry.yarnpkg.com/@parameter1/base-cms-marko-web-theme-monorail/-/base-cms-marko-web-theme-monorail-4.12.2.tgz#9b27e128a741e95b4d89ead55144a0278dc1acbc"
@@ -6647,7 +6660,7 @@ postcss-convert-values@^5.1.3:
     browserslist "^4.21.4"
     postcss-value-parser "^4.2.0"
 
-"postcss-critical-split@github:mrnocreativity/postcss-critical-split#51bb6d62bc75d635e32dcce90f30ba3ef6299081":
+postcss-critical-split@mrnocreativity/postcss-critical-split#51bb6d62bc75d635e32dcce90f30ba3ef6299081:
   version "2.5.3"
   resolved "https://codeload.github.com/mrnocreativity/postcss-critical-split/tar.gz/51bb6d62bc75d635e32dcce90f30ba3ef6299081"
 
