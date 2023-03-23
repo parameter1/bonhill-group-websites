@@ -1,43 +1,314 @@
-// import local variables
+// 1. import local variables
 @import "variables";
 
-// import theme css
-@import "@parameter1/base-cms-marko-web-theme-monorail/scss/core";
-// Bottom Sticky Leader Board
-@import "@parameter1/base-cms-marko-web-gam/scss/fixed-ad-bottom";
-// Reveal Ad CSS
-// @import "@parameter1/base-cms-marko-web-reveal-ad/scss/reveal-ad";
-// @import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/reveal-ad";
+// 2. theme FVMs.
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/functions";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/variables";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/mixins";
+
+// 2.1. theme mixins
+@import "mixins";
+
+// 3. selectively import bootstrap. mark as critical when necessary–
+/*! critical:start */
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+/*! critical:end */
+/*! critical:start|user */
+/*! critical:start|content.product */
+/*! critical:start|content.company */
+@import "bootstrap/scss/custom-forms";
+/*! critical:end */
+/*! critical:start|website-section */
+/*! critical:start|search */
+/*! critical:start|user */
+/*! critical:start|content.product */
+/*! critical:start|content.company */
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/input-group";
+@import "bootstrap/scss/tables";
+/*! critical:start|user */
+/*! critical:start|error */
+/*! critical:start|website-section.directory */
+/*! critical:start|subscribe */
+/*! critical:start|content */
+@import "bootstrap/scss/breadcrumb";
+/*! critical:end */
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
+
+// 4. selectively import core items. mark as critical when necessary
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web/scss/document";
+@import "@parameter1/base-cms-marko-web/scss/node";
+@import "@parameter1/base-cms-marko-web/scss/node-list";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web/scss/load-more"; // @todo verify this is used
+@import "@parameter1/base-cms-marko-web/scss/page-image"; // @todo verify this is used
+@import "@parameter1/base-cms-marko-web/scss/carousel"; // @todo verify this is used
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web-icons/scss/icons";
+/*! critical:end */
+/*! critical:start|content */
+@import "@parameter1/base-cms-marko-web-social-sharing/scss/buttons";
+/*! critical:end */
+/*! critical:start|site-map */
+@import "@parameter1/base-cms-marko-web-html-sitemap/scss/index";
+/*! critical:end */
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web-gam/scss/fixed-ad-bottom"; // bottom sticky leader board
+/*! critical:end */
+
+// 5. selectively import theme items. mark as critical when necessary
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/default-theme/site-navbar"; // load navbar from default theme first... allows for alternate monorail navbars to override these defaults
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/ad-container";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/author-node";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/author-bio-node";
+/*! critical:start|content */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/author-published-node";
+/*! critical:end */
+/*! critical:start|user */
+/*! critical:start|error */
+/*! critical:start|website-section.directory */
+/*! critical:start|subscribe */
+/*! critical:start|content */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/breadcrumbs";
+/*! critical:end */
+
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/comments";
+/*! critical:start|content */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/content-page";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/embedded-media";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/identity-x";
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/lazyload";
+/*! critical:end */
+/*! critical:start|magazine */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/magazine-publication-buttons";
+/*! critical:end */
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/node";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/node-list";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/page";
+/*! critical:end */
+
+/*! critical:start|content */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/page-attribution";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/page-contact-details";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/page-dates";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/page-image";
+/*! critical:start|content */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/page-rail";
+/*! critical:end */
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/page-wrapper";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/pagination-controls";
+/*! critical:start|search */
+/*! critical:start|website-section.directory */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/search-page";
+/*! critical:end */
+
+/*! critical:start|user */
+/*! critical:start|error */
+/*! critical:start|subscribe */
+/*! critical:start|content.webinar */
+/*! critical:start|site-map */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/site-footer";
+/*! critical:end */
+
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/site-header";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/site-menu";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/social-icons";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/sponsor-logo";
+/*! critical:start|content */
+/*! critical:start|website-section */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/sticky-top";
+/*! critical:end */
+
+// 6. selectively import theme _block_ items. mark as critical when necessary
+// @todo VERIFY ALL OF THESE - were all being included by monorail
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/callout-cards";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/content-card-deck";
+/*! critical:start|content.company */
+/*! critical:start|content.product */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/company-inquiry-form";
+/*! critical:end */
+
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/hero-card";
+/*! critical:start|home */
+/*! critical:start|content */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/latest-content-list";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/latest-podcast";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/latest-products-feed";
+/*! critical:start|magazine */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/magazine-publication-card";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/more-products";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/most-popular";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/newsletter-signup-banner";
+/*! critical:start|home */
+/*! critical:start|website-section */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/newsletter-signup-banner-large";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/newsletter-signup-site-footer";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/node-author";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/opinion";
+/*! critical:start|content.whitepaper */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/primary-image";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/products";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/promo-card";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/read-next";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/related-native-x-stories";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/related-stories";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/section-card-deck-featured";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/section-card-list";
+/*! critical:start|website-section */
+/*! critical:start|search */
+/*! critical:start|content.contact */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/section-feed";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/section-list";
+/*! critical:start */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/social-follow";
+/*! critical:end */
+/*! critical:start|home */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/top-stories";
+/*! critical:end */
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/top-stories-menu";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/white-papers";
+
+// 7. selectively import theme _flow_ items. mark as critical when necessary
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/flows/card-deck";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/flows/column-list";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/flows/featured";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/flows/hero";
+@import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/flows/incremented-nodes";
+
+// 8. everything else...
+
+// magazine component
+/*! critical:start|magazine */
+@import "@parameter1/base-cms-marko-web-theme-monorail-magazine/scss/index";
+/*! critical:end */
 
 // package component css inclusions
+/*! critical:start|website-section.directory */
 @import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/directory-facets";
 @import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/company-search";
 @import "@parameter1/base-cms-marko-web-theme-monorail/scss/components/blocks/section-search";
+/*! critical:end */
 
 // skin components
+/*! critical:start */
+@import "./components/ad-container";
+/*! critical:end */
+@import "./components/ad-skin";
+@import "./components/ad-slide-out";
+@import "./components/author-bios";
+/*! critical:start|magazine */
+@import "./components/magazine";
+/*! critical:end */
+@import "./components/magazine-issues";
+@import "./components/newsletter-signup-banner";
+/*! critical:start|home */
+/*! critical:start|website-section */
+@import "./components/newsletter-signup-banner-large";
+/*! critical:end */
+/*! critical:start */
+@import "./components/node";
+/*! critical:end */
+/*! critical:start|home */
+@import "./components/node-carousel";
+/*! critical:end */
+@import "./components/node-list";
+@import "./components/page";
+/*! critical:start|content */
+@import "./components/page-rail";
+/*! critical:end */
+/*! critical:start */
+@import "./components/page-wrapper";
+/*! critical:end */
+/*! critical:start|website-section.podcasts */
+@import "./components/podcast";
+/*! critical:end */
+/*! critical:start */
+@import "./components/subscribe-menu";
+/*! critical:end */
 @import "./components/section-feed-upcoming";
-@import "./components/content-meter";
+/*! critical:start|content.company */
+@import "./components/company-page";
+/*! critical:start|content */
+@import "./components/content-page";
+/*! critical:end */
+/*! critical:start|website-section.directory */
 @import "./components/directory-section-feed";
+/*! critical:end */
+/*! critical:start|user */
+/*! critical:start|error */
+/*! critical:start|subscribe */
+/*! critical:start|content.webinar */
+/*! critical:start|site-map */
 @import "./components/site-footer";
-@import "./components/site-navbar";
+/*! critical:end */
+/*! critical:start */
+@import "./components/site-header";
+@import "./components/site-menu";
 @import "./components/site-navbar-c";
+/*! critical:end */
 @import "./components/user";
+@import "./components/section-sponsor-native-x";
 
+// skin blocks
+@import "./components/blocks/content-card-deck";
+@import "./components/blocks/document-carousel";
+@import "./components/blocks/hero-card";
+/*! critical:start|home */
+/*! critical:start|content */
+@import "./components/blocks/latest-content-list";
+@import "./components/blocks/recommended-content";
+/*! critical:end */
+@import "./components/blocks/related-stories";
+@import "./components/blocks/section-card-list";
+/*! critical:start|website-section */
+/*! critical:start|search */
+/*! critical:start|content.contact */
+@import "./components/blocks/section-feed";
+/*! critical:end */
+@import "./components/blocks/section-list";
+@import "./components/blocks/social-follow";
+/*! critical:start|home */
+@import "./components/blocks/top-stories";
+/*! critical:end */
+
+// skin flows
+@import "./components/flows/card-deck";
+
+/*! critical:start */
 body {
   -webkit-font-smoothing: antialiased;
-  // set a default letter spacing of .25px, since most fonts have some form of spacing
-  letter-spacing: .25px;
 }
+/*! critical:end */
 
+/*! critical:start */
 label {
   @include skin-typography($style: "input-label");
-}
-
-.col-spacer {
-  margin-bottom: 30px;
-  @include media-breakpoint-up(md) {
-    margin-bottom: 0;
-  }
 }
 
 .form-control,
@@ -55,6 +326,7 @@ label {
     }
   }
 }
+/*! critical:end */
 
 .custom-control-label {
   &::before {
@@ -67,6 +339,7 @@ label {
   }
 }
 
+/*! critical:start */
 .btn-primary {
   @include skin-button($style: "primary");
 }
@@ -74,447 +347,115 @@ label {
 .btn-secondary {
   @include skin-button($style: "secondary");
 }
+/*! critical:end */
 
 .btn-light {
   @include skin-button($style: "light");
 }
 
-.document-container {
-  padding-top: 0;
-  background-color: $white;
-}
-
-.node {
-  $self: &;
-  $image-border: 1px solid rgba(239, 239, 239, .9);
-
-  &__header {
-    margin-bottom: 6px;
-  }
-
-  &__content-published {
-    @include skin-typography($style: "date");
-  }
-
-  &__image {
-    border: $image-border;
-  }
-
-  &__image-inner-wrapper--fluid-3by2 {
-    #{ $self } {
-      &__image {
-        border: $image-border;
-        object-fit: cover;
-      }
-    }
-  }
-
-  &--video-content-type {
-    #{ $self } {
-      &__image-inner-wrapper {
-        &::after {
-          $size: 70px;
-          width: 70px;
-          height: 70px;
-          opacity: 1;
-        }
-      }
-    }
-  }
-}
-
-.node-list {
-  &__header {
-    padding-bottom: 0;
-  }
-}
-
-.card-deck-flow {
-  $self: &;
-
-  &--3-cols {
-    #{ $self } {
-      &__node {
-        @include media-breakpoint-up(md) {
-          @include make-col(4);
-        }
-        @include media-breakpoint-up(lg) {
-          @include make-col(4);
-        }
-      }
-    }
-  }
-
-  &--4-cols {
-    #{ $self } {
-      &__node {
-        // account for smaller container max-width and break earlier than normal
-        @include media-breakpoint-up(sm) {
-          @include make-col(12);
-        }
-        @include media-breakpoint-up(md) {
-          @include make-col(6);
-        }
-        @include media-breakpoint-up(lg) {
-          @include make-col(3);
-        }
-
-        // @include media-breakpoint-down(sm) {
-        //   margin-bottom: 16px;
-        // }
-        // &:last-child {
-        //   @include media-breakpoint-down(sm) {
-        //     margin-bottom: 0;
-        //   }
-        // }
-      }
-    }
-  }
-}
-
-// ensure all anvato embeds are treated like videos
-[data-oembed-provider="Anvato"] {
-  @extend .embed-responsive;
-  @extend .embed-responsive-16by9;
-}
-
-// Begin right rail content layout CSS
-// .content-page-header {
-//   margin-left: 0;
-//   margin-right: 0;
-//   max-width: none;
-// }
-.page-wrapper {
-  &__content-name, &__deck {
-    max-width: 950px;
-    margin-bottom: 1rem;
-  }
-}
-// End right rail content layout CSS
-
-.page-wrapper {
-  // $marko-web-document-container-gutter: 20px; couldn't get to work
-  padding: 20px;
-  &--no-padding-x {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .breadcrumbs {
-    &--website-section {
-      @include skin-typography($style: "slug-medium", $link-style: "primary");
-      .breadcrumb {
-        padding-bottom: 8px;
-      }
-    }
-    .breadcrumb {
-      padding-bottom: 0.7rem;
-    }
-    .breadcrumb-item {
-      padding-bottom: 0.3rem;
-    }
-  }
-  &__website-section-description {
-    font-size: 18px;
-  }
-  &__section {
-    .breadcrumbs {
-      margin-bottom: .5rem;
-    }
-    &--break-container {
-      @include media-breakpoint-down(md) {
-        margin-right: -16px;
-        margin-left: -16px;
-      }
-    }
-    &--first-sm {
-      margin-bottom: 0;
-    }
-  }
-  .details__image {
-    clear: both;
-    float: right;
-  }
-}
-
-// .site-header {
-//   margin-bottom: 1rem;
-//   @media (min-width: 980px) {
-//     margin-bottom: 2rem;
-//   }
-// }
-.ad-container {
-  $self: &;
-
-  $container-bottom-padding: 10px;
-  $wrapper-first-child-padding: 16px;
-  $label-bottom-padding: 4px;
-  $label-font-size: 10px;
-  $label-line-height: 1;
-  $container-height: $container-bottom-padding + $wrapper-first-child-padding + ($label-font-size * $label-line-height) + $label-bottom-padding;
-
-  &--inline-content#{&}--template-inline-content-desktop,
-  &--inline-content#{&}--template-inline-content-mobile {
-    margin-bottom: 0;
-    min-height: 250px + $container-height;
-    > *:first-child {
-      padding-bottom: 30px;
-      margin-bottom: 30px;
-    }
-  }
-  &--inline-content#{&}--template-inline-content-desktop {
-    display: none;
-    background-color: #fff;
-    margin-left: 0;
-    margin-right: 0;
-    > *:first-child {
-      border-top: 3px solid $skin-ad-bg-color;
-      border-bottom: 3px solid $skin-ad-bg-color;
-    }
-    @media (min-width: 980px) {
-      display: block;
-    }
-  }
-  &--inline-content#{&}--template-inline-content-mobile {
-    @media (min-width: 780px) {
-      display: block;
-    }
-    @media (min-width: 980px) {
-      display: none;
-    }
-  }
-  &--inline-section-feed {
-    min-height: 250px + $container-height;
-    margin-bottom: 0;
-    margin-right: 0;
-    margin-left: 0;
-    background-color: #fff;
-    > *:first-child {
-      padding-bottom: 30px;
-      border-bottom: 1px solid $skin-ad-bg-color;
-    }
-  }
-  &--template-leaderboard {
-    min-height: $leaderboard-min-height-mobile + $container-height;
-    background-color: #fff;
-    > *:first-child {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-    @media (min-width: 980px) {
-      min-height: $leaderboard-min-height-desktop + $container-height;
-    }
-  }
-}
-
-.site-footer {
-  &__corporate-logo {
-    filter: brightness(0) invert(1);
-  }
-}
-
-// Begin right rail content layout CSS
-.content-page-body {
-  padding-top: 12px;
-  min-height: 500px;
-  .primary-image {
-    &--aligned-center {
-      @media (min-width: 900px) {
-        margin-left: 0;
-        width: 700px;
-      }
-    }
-  }
-  @media (min-width: 900px) {
-    .primary-image {
-      &--aligned-center {
-        margin-left: 0;
-        width: initial;
-      }
-    }
-  }
-}
-.page {
-  .content-page-header {
-    max-width: none;
-    margin-right: 0;
-    margin-left: 0;
-  }
-  &--content-page {
-    .content-page-header {
-      max-width: 700px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
-  &--search {
-    .ad-container {
-      &--template-leaderboard {
-        min-height: 0;
-        display: none;
-      }
-    }
-  }
-}
-
-.node-list {
-  &--latest-content-list {
-    .node-list {
-      &__header {
-        padding-top: 0;
-      }
-    }
-  }
-  &--latest-opinion-list {
-    .node {
-      &__image {
-        border: none;
-      }
-    }
-  }
-}
-// End right rail content layout CSS
-
-// page & block title
-.page--load-more .node-list,
-.top-stories,
-.related-stories,
-.content-card-deck,
-.section-cards {
-  &__header {
-    position: relative;
-    @include skin-typography($style: "header-2");
-    margin-bottom: 16px;
-    padding-top: 24px;
-    padding-left: 0;
-    &:before {
-      background: $primary;
-      content: "";
-      height: 4px;
-      left: 0;
-      position: absolute;
-      top: 12px;
-      width: 40px;
-    }
-  }
-}
-.node-list {
-  $self: &;
-  &__nodes {
-    padding-top: 0;
-  }
-  &--latest-content-list, &--section-feed, &--section-list, &--wufoo {
-    #{ $self }__header {
-      @include skin-typography($style: "header-2");
-      margin-bottom: 16px;
-      padding-top: 24px;
-      padding-left: 0;
-      &:before {
-        background: $primary;
-        content: "";
-        height: 4px;
-        left: 0;
-        position: absolute;
-        top: 12px;
-        width: 40px;
-      }
-    }
-  }
-  &--wufoo {
-    #{ $self }__body {
-      padding: 0;
-    }
-  }
-}
-.top-story {
-  &__row {
-    margin-bottom: 1rem;
-    .node {
-      &__body {
-        margin-top: 14px;
-      }
-      &__title {
-        font-size: 24px;
-      }
-      &__website-section-name {
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
-.node-list {
-  $self: &;
-  &--section-feed {
-    #{ $self } {
-      &__node {
-        @include media-breakpoint-up(md) {
-          @include marko-web-node-list-border(border-bottom);
-          padding-bottom: 20px;
-          padding-top: 20px;
-        }
-      }
-    }
-  }
-}
-.section-feed-content-node {
-  &__content-teaser {
-    font-size: 1rem;
-  }
-}
-
-// Prevent Reveal Ad from causing CLS
-// @TODO determin if this should be moved to @parameter1/base-cms-marko-web
-#marko-web-reveal-ad-handler {
-  display: none;
-}
-.reveal-ad {
-  height: 298px;
-}
-.page {
-  &--content-event {
-    .page-dates {
-      &__content-starts,
-      &__content-ends {
-        @include skin-typography($style: "article-text", $link-style: "content-body");
-      }
-    }
-  }
-}
-.page-contact-details {
-  @include skin-typography($style: "article-text", $link-style: "content-body");
-}
-
-// Override default container width
-$max-container-width: 1300px;
-@media (min-width: 1080px) {
-  .document-container {
-    max-width: $max-container-width;
-  }
-  .site-navbar {
-    &__container {
-      max-width: $max-container-width;
-    }
-  }
-}
-
 .sticky-top {
+  /*! critical|content */
+  /*! critical|website-section */
   top: 1rem;
-}
-
-.site-menu {
-  $self: &;
-  top: $theme-site-navbar-logo-height-sm;
-  @media (min-width: $skin-desktop-menu-breakpoint) {
-    top: $theme-site-navbar-logo-height-sm + 26px;
-    z-index: 15000;
-  }
 }
 
 .ad-container {
   &--inter-block {
-    @media (min-width: 1080px) {
-      margin-right: 0;
-      margin-left: 0;
-    }
+    background-color: #fff;
   }
 }
+
+
+// .document-container {
+//   padding-top: 0;
+//   background-color: $white;
+// }
+
+// .ad-container {
+//   $self: &;
+
+//   $container-bottom-padding: 10px;
+//   $wrapper-first-child-padding: 16px;
+//   $label-bottom-padding: 4px;
+//   $label-font-size: 10px;
+//   $label-line-height: 1;
+//   $container-height: $container-bottom-padding + $wrapper-first-child-padding + ($label-font-size * $label-line-height) + $label-bottom-padding;
+
+//   &--inline-content#{&}--template-inline-content-desktop,
+//   &--inline-content#{&}--template-inline-content-mobile {
+//     margin-bottom: 0;
+//     min-height: 250px + $container-height;
+//     > *:first-child {
+//       padding-bottom: 30px;
+//       margin-bottom: 30px;
+//     }
+//   }
+//   &--inline-content#{&}--template-inline-content-desktop {
+//     display: none;
+//     background-color: #fff;
+//     margin-left: 0;
+//     margin-right: 0;
+//     > *:first-child {
+//       border-top: 3px solid $skin-ad-bg-color;
+//       border-bottom: 3px solid $skin-ad-bg-color;
+//     }
+//     @media (min-width: 980px) {
+//       display: block;
+//     }
+//   }
+//   &--inline-content#{&}--template-inline-content-mobile {
+//     @media (min-width: 780px) {
+//       display: block;
+//     }
+//     @media (min-width: 980px) {
+//       display: none;
+//     }
+//   }
+//   &--inline-section-feed {
+//     min-height: 250px + $container-height;
+//     margin-bottom: 0;
+//     margin-right: 0;
+//     margin-left: 0;
+//     background-color: #fff;
+//     > *:first-child {
+//       padding-bottom: 30px;
+//       border-bottom: 1px solid $skin-ad-bg-color;
+//     }
+//   }
+//   &--template-leaderboard {
+//     min-height: $leaderboard-min-height-mobile + $container-height;
+//     background-color: #fff;
+//     > *:first-child {
+//       padding-top: 0;
+//       padding-bottom: 0;
+//     }
+//     @media (min-width: 980px) {
+//       min-height: $leaderboard-min-height-desktop + $container-height;
+//     }
+//   }
+// }
+
+// .site-footer {
+//   &__corporate-logo {
+//     filter: brightness(0) invert(1);
+//   }
+// }
+
+
+// .site-menu {
+//   $self: &;
+//   top: $theme-site-navbar-logo-height-sm;
+//   @media (min-width: $skin-desktop-menu-breakpoint) {
+//     top: $theme-site-navbar-logo-height-sm + 26px;
+//     z-index: 15000;
+//   }
+// }
+
+// .ad-container {
+//   &--inter-block {
+//     @media (min-width: 1080px) {
+//       margin-right: 0;
+//       margin-left: 0;
+//     }
+//   }
+// }

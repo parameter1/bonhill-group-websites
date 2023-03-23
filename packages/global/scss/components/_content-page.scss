@@ -1,0 +1,73 @@
+.page-wrapper {
+  &__content-name, &__deck {
+    max-width: 1000px;
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumbs {
+    &--content-page {
+      /*! critical */
+      font-size: 15px;
+    }
+  }
+}
+
+.page {
+  .content-page-header {
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &--content-event {
+    .page-dates {
+      &__content-starts,
+      &__content-ends {
+        @include skin-typography($style: "article-text", $link-style: "content-body");
+      }
+    }
+  }
+
+  &--content-page {
+    .content-page-header {
+      max-width: 1000px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &--content-whitepaper {
+    .page-attribution {
+      &__content-company-name:before {
+        content: "Sponsor"
+      }
+    }
+  }
+}
+
+.content-page-body {
+  padding-top: 12px;
+  min-height: 500px;
+
+  .primary-image {
+    &--aligned-center {
+      @media (min-width: 900px) {
+        margin-left: 0;
+        width: 700px;
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    .primary-image {
+      &--aligned-center {
+        margin-left: 0;
+        width: initial;
+      }
+    }
+  }
+}
+
+.content-page-header .social-sharing {
+  margin-top: 1rem;
+}

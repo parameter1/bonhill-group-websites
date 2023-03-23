@@ -24,17 +24,17 @@ module.exports = {
   },
   logos: {
     navbar: {
-      src: 'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=45&auto=format,compress',
+      src: 'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=25&auto=format,compress',
       srcset: [
-        'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=90&auto=format,compress 2x',
+        'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=25&auto=format,compress&dpr=2 2x',
       ],
-      width: '165',
-      height: '35',
+      width: '257',
+      height: '25',
     },
     footer: {
       src: 'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=60&auto=format,compress',
       srcset: [
-        'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=120&auto=format,compress 2x',
+        'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=60&auto=format,compress&dpr=2 2x',
       ],
       width: '204',
       height: '45',

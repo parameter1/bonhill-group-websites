@@ -8,6 +8,9 @@ $theme-site-header-breakpoints: (
 // Colors
 $primary: #dc0d23;
 
+// Navbar
+$theme-site-navbar-logo-height: 50px !default;
+
 @import "@bonhill-group/package-global/scss/core";
 
 // this makes the user icon display as a button

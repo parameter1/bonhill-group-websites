@@ -1,0 +1,17 @@
+.newsletter-signup-banner {
+  margin-bottom: 0;
+  &__name, &__description {
+    &--large {
+      color: $theme-site-navbar-primary-link-color;
+    }
+  }
+  &--large {
+    background-color: $primary;
+  }
+  label {
+    color: $theme-site-navbar-primary-link-color;
+  }
+  .btn-primary {
+    background-color: $secondary;
+  }
+}

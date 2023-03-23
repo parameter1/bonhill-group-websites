@@ -1,0 +1,36 @@
+.site-menu {
+  $self: &;
+
+  top: $theme-site-navbar-logo-height-sm;
+  @media (min-width: $skin-desktop-menu-breakpoint) {
+    top: $theme-site-navbar-logo-height + 31px;
+    z-index: 15000;
+  }
+
+  &__section {
+    &--user {
+      #{ $self }__link {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  &__item {
+    &--user-login {
+      #{ $self }__link {
+        color: $primary;
+      }
+    }
+  }
+
+  &__items {
+    padding-bottom: 24px;
+  }
+}
+
+.social-follow {
+  &--site-menu {
+    padding-bottom: map-get($spacers, block);
+    border-bottom: solid 1px $gray-200;
+  }
+}

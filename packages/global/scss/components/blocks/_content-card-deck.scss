@@ -1,0 +1,23 @@
+.content-card-deck {
+  &__header {
+    @include skin-block-header-overline($flex: true, $text-lg: true);
+  }
+}
+
+.page-wrapper {
+  &__section {
+    &--background-color {
+      .content-card-deck {
+        padding: 1rem 2rem 2rem;
+        background-color: #f0f1f2;
+      }
+    }
+
+    &--background-color-dark {
+      .content-card-deck {
+        padding: 1rem 2rem 2rem;
+        background-color: #39393a;
+      }
+    }
+  }
+}

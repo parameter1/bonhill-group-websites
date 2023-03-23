@@ -1,0 +1,93 @@
+.dfp-horizontal-slide-out-wrapper {
+  width: 470px;
+  @media (max-width: 600px) {
+    width: 360px;
+  }
+  @media (max-width: 380px) {
+    width: 300px;
+  }
+  overflow: hidden;
+  position: relative;
+  z-index: 100001;
+
+  .dfp-slide-out-close {
+    background-image: url(https://sc.bobitstudios.com/icons/icon-close-black-transparent.png) !important;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    display: block;
+    position: absolute;
+    right: 7px;
+    top: 12px;
+  }
+  .dfp-horizontal-slide-out {
+    overflow: hidden;
+    width: 440px;
+    @media (max-width: 600px) {
+      width: 330px;
+    }
+    @media (max-width: 380px) {
+      width: 270px;
+    }
+    margin: 20px auto;
+    padding: 15px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    figure {
+      float: left;
+      img {
+        @media (max-width: 600px) {
+
+          max-width: 100px;
+        }
+        @media (max-width: 380px) {
+          max-width: 70px;
+        }
+      }
+
+    }
+    .dfp-horizontal-info {
+      float: left;
+      width: 240px;
+      @media (max-width: 600px) {
+        width: 180px;
+      }
+      @media (max-width: 380px) {
+        width: 150px;
+      }
+      margin-left: 15px;
+      padding-top: 10px;
+      h3 {
+        margin-top: 0;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #777777;
+        margin-bottom: 5px;
+        font-weight: normal;
+        font-family: "Open Sans", helvetica, arial, sans-serif;
+      }
+      h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-family: "open-sans-condensed", helvetica, arial, sans-serif;
+      }
+      p {
+        font-size: 14px;
+        color: #333333;
+        margin-bottom: 10px;
+        line-height: 1.5em;
+      }
+      .btn {
+        @media (max-width: 380px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
