@@ -30,6 +30,29 @@ $ const idxPushdownTogglerProps = {
 >
   <${input.aboveNav} />
 
+  <marko-web-resolve-page|{ data }| node=pageNode>
+    <if(data.primarySection)>
+      $ const aliases = hierarchyAliases(data.primarySection);
+      <theme-gam-define-display-ad
+        name="leaderboard"
+        position="content_page"
+        aliases=aliases
+        modifiers=["inter-block"]
+      />
+    </if>
+    <else>
+      $ const aliases = getAsArray(hierarchyAliases(data));
+      <theme-gam-define-display-ad
+        name="leaderboard"
+        position="section_page"
+        aliases=aliases
+        modifiers=["inter-block"]
+      />
+    </else>
+
+  </marko-web-resolve-page>
+
+
   <theme-site-navbar modifiers=["top"] attrs={ "aria-label": "Top Navigation" }>
     <div class=`${headerColClass} site-navbar__left`>
       <if(navigation.subscribeDropdown.length)>
