@@ -363,6 +363,15 @@ label {
   &--inter-block {
     background-color: #fff;
   }
+  &--template-leaderboard {
+    background-color: #e5e5e5;
+  }
+}
+
+.site-navbar {
+  &--top {
+    box-shadow: 0 0 8px 0 hsl(240deg 8% 51% / 20%);
+  }
 }
 
 
