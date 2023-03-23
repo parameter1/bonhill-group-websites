@@ -364,13 +364,31 @@ label {
     background-color: #fff;
   }
   &--template-leaderboard {
-    background-color: #e5e5e5;
+    background-color: #f7f7f7;
   }
 }
 
 .site-navbar {
+  $self: &;
   &--top {
     box-shadow: 0 0 8px 0 hsl(240deg 8% 51% / 20%);
+    #{ $self }__container {
+      @media (max-width: 994px) {
+        height: 57px;
+      }
+    }
+  }
+  &__logo {
+    @media (min-width: 995px) {
+      width: 210px;
+    }
+  }
+}
+
+.site-menu {
+  top: calc($leaderboard-min-height-mobile + 119px);
+  @media (min-width: 700px) {
+    top: calc($leaderboard-min-height-desktop + 141px);
   }
 }
 

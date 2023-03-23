@@ -28,8 +28,8 @@ module.exports = {
       srcset: [
         'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=25&auto=format,compress&dpr=2 2x',
       ],
-      width: '257',
-      height: '25',
+      width: '154',
+      height: '15',
     },
     footer: {
       src: 'https://p1-cms-assets.imgix.net/files/base/bonhill/all/image/static/in/in-logo.svg?h=60&auto=format,compress',
