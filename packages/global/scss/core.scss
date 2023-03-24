@@ -359,15 +359,6 @@ label {
   top: 1rem;
 }
 
-.ad-container {
-  &--inter-block {
-    background-color: #fff;
-  }
-  &--template-leaderboard {
-    background-color: #f7f7f7;
-  }
-}
-
 .site-navbar {
   $self: &;
   &--top {
