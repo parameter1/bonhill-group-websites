@@ -359,6 +359,7 @@ label {
   top: 1rem;
 }
 
+/*! critical:start */
 .site-navbar {
   $self: &;
   &--top {
@@ -374,3 +375,4 @@ label {
     }
   }
 }
+/*! critical:end */
