@@ -29,7 +29,7 @@ $ const alias = get(input, "primarySection.alias");
       $ const authors = getAsArray(content, "authors.edges").map((edge) => edge.node);
       <marko-web-page-wrapper>
         <for|s| of=sections>
-          <@section|{ blockName }| modifiers=s.modifiers>
+          <@section|{ blockName }| class=s.class modifiers=s.modifiers>
             <${s.renderBody}
               block-name=blockName
               content=content

@@ -36,12 +36,11 @@ $ const promise = homePageTopStoriesLoader(apollo, {
         $ const aliases = hierarchyAliases(section);
         <marko-web-page-wrapper>
 
-          <@section|{ aliases }| modifiers=["first-sm"]>
+          <@section|{ aliases }| class=["mb-0"] modifiers=["first-sm"]>
             <theme-gam-define-display-ad
               name="leaderboard"
               position="home_page"
               aliases=aliases
-              modifiers=["inter-block"]
             />
           </@section>
 

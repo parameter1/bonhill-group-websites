@@ -20,7 +20,7 @@ $ const { GAM } = out.global;
       $ const aliases = hierarchyAliases(section);
       <marko-web-page-wrapper>
         <for|s| of=sections>
-          <@section|{ blockName }| modifiers=s.modifiers>
+          <@section|{ blockName }| class=s.class modifiers=s.modifiers>
             <${s.renderBody}
               block-name=blockName
               section=section
