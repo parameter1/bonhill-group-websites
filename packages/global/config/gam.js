@@ -34,6 +34,12 @@ module.exports = ({
         { viewport: [300, 0], size: [[300, 50], [320, 50]] },
       ],
     })
+    .setTemplate('RAIL-1', {
+      size: [300, 600],
+      sizeMapping: [
+        { viewport: [300, 0], size: [300, 600] },
+      ],
+    })
     .setTemplate('ROTATION', {
       size: [300, 250],
       sizeMapping: [
