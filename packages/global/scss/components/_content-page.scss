@@ -71,3 +71,10 @@
 .content-page-header .social-sharing {
   margin-top: 1rem;
 }
+
+.author-published-node {
+  &__content-published, &__content-updated {
+    font-family: $skin-font-family-primary;
+    text-transform: uppercase;
+  }
+}
