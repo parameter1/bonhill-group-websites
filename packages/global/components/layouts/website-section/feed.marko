@@ -55,6 +55,13 @@ $ const perPage = 12;
 
     <global-section-feed-wrapper aliases=aliases alias=alias>
       <@rail>
+        <theme-gam-define-display-ad
+          name="rail-1"
+          position="content_page"
+          aliases=aliases
+          modifiers=["max-width-300", "center", "margin-auto-x"]
+          class="mb-0"
+        />
         <global-latest-opinion-list-block
           title="Opinion"
           alias="opinion"
@@ -62,6 +69,12 @@ $ const perPage = 12;
         />
       </@rail>
       <@rail>
+        <theme-gam-define-display-ad
+          name="rotation"
+          position="section_page"
+          aliases=aliases
+          modifiers=["max-width-300", "center", "margin-auto-x"]
+        />
         <theme-recommended-content-list-block class="sticky-top" />
       </@rail>
     </global-section-feed-wrapper>
