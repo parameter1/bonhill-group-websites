@@ -374,10 +374,12 @@ label {
       width: 210px;
     }
   }
-}
-.ad-container {
-  &--template-leaderboard {
-    background-color: #f7f7f7;
+  &--primary {
+    #{ $self }__item {
+      flex-grow: unset;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 }
 /*! critical:end */

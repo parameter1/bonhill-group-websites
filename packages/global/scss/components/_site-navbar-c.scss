@@ -26,7 +26,7 @@
 
   &__items {
     &--primary {
-      justify-content: space-between;
+      justify-content: center;
     }
 
     &--user {
@@ -162,6 +162,7 @@
   &--primary {
     background-color: $theme-site-navbar-primary-bg-color;
     border-top: 1px solid $gray-400;
+    border-bottom: 1px solid $gray-400;
     #{ $self } {
       &__link {
         color: $theme-site-navbar-primary-link-color;
