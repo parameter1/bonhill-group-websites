@@ -61,4 +61,7 @@
       min-height: 20px + $leaderboard-min-height-desktop + $container-height;
     }
   }
+  &--template-rail-1 {
+    min-height: 20px + 600px + $container-height;
+  }
 }
