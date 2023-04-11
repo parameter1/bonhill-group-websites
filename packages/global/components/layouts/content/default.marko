@@ -223,7 +223,13 @@ $ const shouldInjectAds = ["article", "video", "news", "podcast"].includes(type)
         </div>
       </div>
       <div class="col-lg-4 page-rail">
-
+        <theme-gam-define-display-ad
+          name="rail-1"
+          position="content_page"
+          aliases=aliases
+          modifiers=["max-width-300", "center", "margin-auto-x"]
+          class="mb-0"
+        />
 
         <!-- $ const excludeContentTypes = ["Contact", "Company", "Document", "TextAd", "Promotion"];
         <theme-latest-content-list-block
@@ -239,7 +245,6 @@ $ const shouldInjectAds = ["article", "video", "news", "podcast"].includes(type)
             <theme-recommended-content-list-block
               alias=primarySection.alias
               query-params={ excludeContentIds: [content.id] }
-              class="sticky-top"
             />
           </if>
           <else>
@@ -247,10 +252,16 @@ $ const shouldInjectAds = ["article", "video", "news", "podcast"].includes(type)
               title="Opinion"
               alias="opinion"
               query-params={ excludeContentIds: [content.id] }
-              class="sticky-top"
+              class="mb-0"
             />
           </else>
         </marko-web-identity-x-context>
+        <theme-gam-define-display-ad
+          name="rotation"
+          position="content_page"
+          aliases=aliases
+          modifiers=["max-width-300", "center", "margin-auto-x"]
+        />
       </div>
     </div>
   </@section>
